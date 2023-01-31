@@ -1,0 +1,165 @@
+@use 'base'
+$box-size: 85vw
+
+.animation
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    padding-top: base.$padding-to-title
+    display: flex
+    flex-direction: column
+    align-items: center
+    background-color: base.$background-color
+    padding-left: 13px
+    padding-right: 13px
+    overflow-y: scroll
+    overflow-x: hidden
+
+    button
+        @include base.bg-button
+        width: $box-size
+        padding-bottom: 20px
+        padding-top: 20px
+        color: base.$background-color
+
+.prizeBox
+    width: $box-size
+    height: 251px
+    border: none
+    box-sizing: border-box
+    background-color: base.$yellow
+
+
+    .innerBox
+      text-align: center
+      height: 100%
+      width: $box-size
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      
+
+      .prize
+        @include base.prime-font
+        color: black
+        width: 100%
+      .canvas
+        // height: 50%
+        width: 100%
+        // background: red
+      h3
+          @include base.oswald-regular
+          color: black
+          font-size: 48px
+          
+
+
+
+.winwinEnter 
+
+  opacity: 0
+  transform: scale(10)
+
+.winwinEnterActive 
+  opacity: 1
+  transform: translateX(0)
+  transition: opacity 0.5s, transform 0.5s
+
+.winwinExit 
+  opacity: 1
+
+.winwinExitActive 
+  opacity: 0
+  transform: scale(0.9)
+  transition: opacity 0.5s, transform 0.5s
+
+.winwinModal
+  @extend .animation
+  position: absolute
+  top: 0
+  left:0
+  right: 0
+  background-color: base.$background-color
+  
+  
+  h1
+    text-align: center
+    color: base.$primary-color
+  button
+    margin-bottom: 100px
+
+.winwinPrizeBox
+  @extend .prizeBox
+  .winwinInnerBox
+    @extend .innerBox
+  .winwinRub
+    @include base.oswald-regular
+    font-size: 48px
+    color: black
+
+
+
+
+
+.fakeText
+  @include base.oswald-regular
+  transform: translateY(-70px)
+  margin-left: 20px
+  margin-right: 20px
+  text-align: center
+
+.fakeRools
+  @include base.border-button
+  transform: translateY(-50px)
+  font-size: 20px
+  text-align: center
+  text-decoration: none
+  
+.rickBotBorder
+  width: $box-size
+  background-color: base.$primary-color
+  height: 80px
+  
+.imgRick
+  transform: translateY(11px)
+
+
+@media screen and ( min-width: 500px )
+  .animation
+    width: 500px
+    left: auto
+    right: auto
+    transform: translateX(-13px)
+    button
+        width: 100%
+        
+  .prizeBox
+    width: 100%
+    height: 350px
+    .innerBox
+      width: 100%
+      height: 100%
+      box-sizing: border-box
+      padding-top: 70px
+      padding-bottom: 70px
+    
+  .winwinModal
+    div
+      width: 100%
+  .winwinPrizeBox
+    @extend .prizeBox
+    border-color: base.$primary-color
+    width: 100%
+    color: black
+    .winwinInnerBox
+      @extend .innerBox
+      width: 100%
+      border-color: base.$primary-color
+    .winwinRub
+      @include base.prime-font
+      font-size: 60px
+
+      color: black

@@ -1,0 +1,113 @@
+@use 'base'
+
+.winnerPage
+   
+    form
+
+        
+        p   
+            @include base.oswald-regular
+            color: #FFFFFF80
+            margin-bottom: 45px
+            text-align: center
+        input
+            @include base.form-input
+            font-size: 24px
+            margin-bottom: 15px
+        button
+            @include base.bg-button
+            font-size: 36px
+            margin-top: 20px
+            margin-bottom: 20px
+
+.title
+    @include base.title-underline
+    width: 100%
+    margin-bottom: 15px
+
+.phoneDiv        
+    display: flex
+    flex-direction: row
+    align-items: center
+    width: 100%
+    background-color: base.$primary-color
+    span
+        @include base.prime-font
+        color: base.$background-color
+        font-size: 24px
+        padding-left: 5px
+        padding-right: 5px 
+    .phoneInput
+        margin: 0
+
+            
+.checkInputs
+    display: flex
+    flex-direction: column
+    flex-grow: 3
+    word-break: break-word
+
+    
+    p   
+        @include base.sec-font
+        margin-bottom: 30px
+    .check
+        @include base.prime-font
+        height: 48px
+        width: 100%
+        background: base.$yellow
+        color: black
+        font-size: 15px
+        align-self: flex-start
+        text-align: center
+        font-size: 24px
+        margin-bottom: 11px
+        display: flex
+        justify-content: center
+        align-items: center
+        text-decoration: underline
+    
+    button
+        margin: 5px auto
+       
+
+.submit
+    @include base.bg-button
+    font-size: 36px
+    margin-top: 20px
+    margin-bottom: 20px
+.change
+    @include base.border-button
+    font-size: 36px
+ 
+
+
+.cardPage
+    display: flex
+    flex-direction: column
+
+    input
+        @include base.form-input
+        font-size: 24px
+        margin-bottom: 30px
+    button
+        @include base.bg-button
+        font-size: 36px
+        margin-top: 20px
+        margin-bottom: 20px
+
+    .wellcall
+        height: 201px
+        display: flex
+        justify-content: center
+        align-items: center
+        background: base.$yellow
+        @include base.oswald-regular
+        color: black
+        font-size: 20px
+        line-height: 23.48px
+        padding: 0 24px
+        text-align: center
+
+       
+    

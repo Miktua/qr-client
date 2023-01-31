@@ -1,0 +1,22 @@
+@use 'base'
+
+.header
+    @include base.prime-font
+    font-size: 32px
+    line-height: 39px
+    color: white
+    text-align: left
+.divider
+    width: 100%
+    border: 2px solid white
+    margin: 16px 0
+
+.subHeader
+    @include base.oswald-regular
+    font-size: 16px
+    text-align: left
+    line-height: 24px
+    text-transform: uppercase
+    color: white
+    a
+        color: base.$yellow

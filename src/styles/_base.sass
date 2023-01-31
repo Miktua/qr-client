@@ -1,0 +1,115 @@
+// @font-face 
+//     font-family: RussoOne-Regular
+//     src: url(./fonts/RussoOne-Regular.ttf)
+//     src: url(./fonts/RussoOne-Regular.woff)
+//     // @import url(https://fonts.googleapis.com/css2?family=Anton&display=swap)
+
+// @font-face 
+//     font-family: Anton-Regular
+//     src: url(https://fonts.googleapis.com/css2?family=Anton&display=swap)
+//     src: url(./fonts/Anton-Regular.ttf) 
+//     src: url(./fonts/Anton-Regular.woff)
+
+// @font-face 
+//     font-family: Oswald-Bold, sans-serif
+//     src: url('https://fonts.googleapis.com/css2?family=Oswald&display=swap') , url(./fonts/Oswald-Bold.ttf) , url(./fonts/Oswald-Bold.woff)
+
+// @font-face 
+//     font-family: Oswald-Regular, sans-serif
+//     // src: url('https://fonts.googleapis.com/css2?family=Oswald&display=swap')
+//     src: url(./fonts/Oswald-Regular.ttf) 
+//     src: url(./fonts/Oswald-Regular.woff)
+
+    
+$primary-color: white
+$background-color: black
+$yellow: #FADB05
+$primary-font: Russo One
+$second-font: Russo One
+$padding-to-title: 45px
+$oswald: Oswald
+
+@mixin prime-font
+    font: 100% $primary-font
+    color: $primary-color
+    text-transform: uppercase
+
+@mixin oswald-bold
+    font-family: $oswald
+    font-weight: 700
+    color: $primary-color
+    text-transform: uppercase
+
+@mixin oswald-regular
+    font-family: $oswald
+    color: $primary-color
+    font-weight: 400
+    text-transform: uppercase
+
+@mixin title-underline
+    @include prime-font
+    border-bottom: 4.6px solid $primary-color
+    text-align: center
+    padding-bottom: 3px
+    width: 100%
+    text-transform: uppercase
+
+@mixin sec-font
+    font: 100% $second-font
+    color: $primary-color
+    text-transform: uppercase
+    
+
+@mixin nav-link
+    font: 100% $oswald
+    font-weight: 700
+    color: $primary-color
+    text-decoration: none
+    cursor: pointer
+
+
+@mixin form-input
+    @include prime-font
+    height: 48px
+    width: 100%
+    background-color: $yellow
+    color: $background-color
+    border: none
+    font-size: 18px
+    line-height: 21.69px
+    text-align: center
+    &::placeholder
+        color: #00000080
+
+@mixin border-button
+    @include oswald-regular
+    background-color: transparent
+    border: 0.1em solid $primary-color
+    font-size: 16px !important
+    line-height: 24px
+    border: none
+    border-bottom: 1px solid white
+    color: white
+    width: max-content
+    padding-top: 1px
+
+@mixin bg-button
+    width: 100%
+    background-color: #FB1D2D
+    border: none
+    border-radius: 45px
+    color: white !important
+    display: flex
+    justify-content: center
+    align-items: center
+    @include oswald-bold
+    font-size: 24px
+    line-height: 120%
+    height: 61px
+    a
+        @include nav-link
+        height: 24px
+        color: white !important
+        font-size: 24px
+        line-height: 120%
+        height: 61px
