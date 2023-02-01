@@ -11,6 +11,7 @@ import { useEffect } from 'react';
 import FakeValidationForm from './components/fakeWinner/FakeValidation';
 
 const  App = () => {
+  console.log('p:'+process.env.REACT_APP_IP)
   const history = createBrowserHistory();
   useEffect(()=>{
     
