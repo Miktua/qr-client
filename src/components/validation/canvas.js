@@ -22,13 +22,13 @@ const NewCanvas = ({win, delay}) => {
         <Suspense fallback={null}>
             <EffectComposer>
             <Text
-  color="#000000" // default
-  anchorX="center" // default
-  anchorY="middle" // default
-  fontSize={winSize}
-  font={`/RussoOne-Regular.woff`}
-  
->
+                color="#000000" // default
+                anchorX="center" // default
+                anchorY="middle" // default
+                fontSize={winSize}
+                font={`/RussoOne-Regular.woff`}
+            
+            >
                     {win}
                 </Text>
                 <Glitch 
