@@ -1,0 +1,53 @@
+
+  // @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Bungee+Hairline&family=Bungee+Outline&family=Flow+Block&family=Inspiration&family=Noto+Nastaliq+Urdu:wght@700&family=Noto+Sans+KR:wght@900&family=Noto+Sans+TC:wght@900&family=Rubik+Bubbles&family=Rubik+Glitch&family=Rubik+Spray+Paint&display=swap');
+
+
+  .glitch {
+    font-family: Russo One;
+    font-size: 128px;
+    font-weight: bold;
+    color: black;
+    text-shadow: -4px -4px 0 #FB1D2D, 4px 4px 0 yellow, 4px 4px 20px yellow,
+      -4px -4px 20px #FB1D2D, 0px 0px 20px yellow;
+    position: relative;
+  }
+  .glitch span {
+    font-family: Russo One;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .glitch span:first-of-type {
+    clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+    z-index: -1;
+    animation: glitch steps(1) 3s infinite;
+  }
+  
+  .glitch span:last-of-type {
+    clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+    animation: glitch steps(1) 2.3s infinite;
+  }
+  @keyframes glitch {
+    0% {
+      transform: translate(0px);
+    }
+    55% {
+      transform: translate(0px) skew(20deg);
+    }
+    60% {
+      transform: translateX(8px);
+      color: transparent;
+    }
+    65% {
+      transform: translate(0px, 8px);
+      color: inherit;
+    }
+    90% {
+      transform: translate(8px, 8px) skew(-10deg);
+      color: #23232b;
+    }
+    100% {
+      transform: translate(8px, 8px);
+      color: inherit;
+    }
+  }

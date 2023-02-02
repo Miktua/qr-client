@@ -63,6 +63,7 @@ const FakeWinAnimation = ({win, closeAnimation}) => {
       state && vibration()
    },[state])
 
+
     return (
       <div className={styles.animation}>
         <Header text={'ВАШ ПРИЗ'} />
