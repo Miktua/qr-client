@@ -59,7 +59,8 @@ const FakeValidationForm = ({link}) => {
                       required='true'
                   />}
               </InputMask>
-                  
+
+                <SubHeader text={'Пожалуйста, обратите внимание что буква О и цифра 0 в инструкции очень похожи. Если у вас не подходит код, то попробуйте разные комбинации символов'} />
                   <button type="submit">ВВЕСТИ КОД</button>
               </form>
             </>
